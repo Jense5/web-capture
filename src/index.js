@@ -1,6 +1,7 @@
 // @flow
 
 import path from 'path';
+import isUrl from 'is-url';
 import webshot from 'webshot';
 
 // The options to fetch the full webpage.
@@ -15,9 +16,11 @@ const OPTIONS = { shotSize: { width: 'all', height: 'all' } };
 export default (url: string, outputPath: string) => {
   const absoluteOutputPath = path.resolve(process.cwd(), outputPath);
   return new Promise((resolve, reject) => {
-    webshot(url, absoluteOutputPath, OPTIONS, (err) => {
-      if (err) { reject(err); }
-      resolve(absoluteOutputPath);
-    });
+    if (isUrl(url)) {
+      webshot(url, absoluteOutputPath, OPTIONS, (err) => {
+        if (err) { reject(err); }
+        resolve(absoluteOutputPath);
+      });
+    } else { reject('Invalid url provided.'); }
   });
 };
