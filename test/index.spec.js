@@ -11,7 +11,7 @@ describe('Default tests', () => {
       done();
     })
     .catch(done);
-  }).timeout(10000);
+  }).timeout(25000);
   it('should not request invalid url', (done) => {
     capture('invalid', '')
     .then(() => { done('Should not succeed!'); })
