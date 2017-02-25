@@ -1,6 +1,6 @@
 {
   "name": "web-capture",
-  "version": "0.0.3",
+  "version": "0.0.0-development",
   "description": "webshot wrapper with cli and promises",
   "repository": "https://github.com/Jense5/web-capture.git",
   "author": "Jensen Bernard <jensenbernard5@gmail.com> (twitter.com/Jense5_)",
@@ -29,11 +29,15 @@
     "cover": "nyc npm run test",
     "cover:check": "nyc check-coverage --statements 80 --functions 80 --lines 80",
     "cover:report": "cat ./coverage/lcov.info | codecov",
-    "postcover": "nyc report --reporter=text-lcov > ./coverage/lcov.info"
+    "postcover": "nyc report --reporter=text-lcov > ./coverage/lcov.info",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "commit": "git-cz"
   },
   "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
     "is-url": "^1.2.2",
     "webshot": "^0.18.0",
     "winston": "^2.3.0"
@@ -54,6 +58,8 @@
     "fs-extra": "^2.0.0",
     "mocha": "^3.2.0",
     "nyc": "^10.1.2",
-    "rimraf": "^2.5.4"
-  }
+    "rimraf": "^2.5.4",
+    "semantic-release": "^6.3.2"
+  },
+  "czConfig": { "path": "node_modules/cz-conventional-changelog" }
 }
