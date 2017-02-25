@@ -13,7 +13,7 @@ const OPTIONS = { shotSize: { width: 'all', height: 'all' } };
  * @param {string} outputPath The outputPath where the image should be written to
  * @returns {Promise<string>} A promise that will create the image and returns the absolute path. */
 export default (url: string, outputPath: string) => {
-  const absoluteOutputPath = path.resolve(__dirname, outputPath);
+  const absoluteOutputPath = path.resolve(process.cwd(), outputPath);
   return new Promise((resolve, reject) => {
     webshot(url, absoluteOutputPath, OPTIONS, (err) => {
       if (err) { reject(err); }

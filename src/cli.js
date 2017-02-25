@@ -28,7 +28,7 @@ if (!commander.url) {
 }
 
 const rawOutputPath = commander.output || 'output.png';
-const outputPath = path.resolve(__dirname, rawOutputPath);
+const outputPath = path.resolve(process.cwd(), rawOutputPath);
 const outputFile = path.extname(outputPath) === '.png' ? outputPath : `${outputPath}.png`;
 
 winston.info(`Capturing ${chalk.cyan(commander.url)}`);
