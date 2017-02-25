@@ -13,7 +13,7 @@
 
 ```sh
 # Capture screenshots of websites via terminal.
-$ npm install -g web-cap.ure
+$ npm install -g web-capture
 $ web-capture --url 'http://consultant.js.org' --output 'consultant.png'
 $ open 'consultant.png'
 ```
