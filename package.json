@@ -1,6 +1,6 @@
 {
   "name": "web-capture",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "webshot wrapper with cli and promises",
   "repository": "https://github.com/Jense5/web-capture.git",
   "author": "Jensen Bernard <jensenbernard5@gmail.com> (twitter.com/Jense5_)",
