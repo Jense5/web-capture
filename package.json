@@ -28,8 +28,7 @@
     "test:watch": "npm run test -- -w",
     "cover": "nyc npm run test",
     "cover:check": "nyc check-coverage --statements 80 --functions 80 --lines 80",
-    "cover:report": "cat ./coverage/lcov.info | codecov",
-    "postcover": "nyc report --reporter=text-lcov > ./coverage/lcov.info",
+    "cover:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "commit": "git-cz"
   },
@@ -48,6 +47,7 @@
     "babel-eslint": "^7.1.1",
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-preset-env": "^1.1.8",
+    "codecov": "^1.0.1",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-flowtype": "^2.30.0",
@@ -61,5 +61,7 @@
     "rimraf": "^2.5.4",
     "semantic-release": "^6.3.2"
   },
-  "czConfig": { "path": "node_modules/cz-conventional-changelog" }
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
