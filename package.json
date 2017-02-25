@@ -1,9 +1,9 @@
 {
   "name": "web-capture",
-  "version": "0.0.0-dev.0",
+  "version": "0.0.1",
   "description": "webshot wrapper with cli and promises",
-  "repository": "https:&#x2F;&#x2F;github.com&#x2F;Jense5&#x2F;web-capture.git",
-  "author": "Jensen Bernard <jensenbernard5@gmail.com> (twitter.com&#x2F;Jense5_)",
+  "repository": "https://github.com/Jense5/web-capture.git",
+  "author": "Jensen Bernard <jensenbernard5@gmail.com> (twitter.com/Jense5_)",
   "license": "MIT",
   "keywords": [
     "web-capture"
@@ -14,7 +14,7 @@
   ],
   "main": "./dist/index.js",
   "bin": {
-    "web-capture": "node ./dist/cli.js"
+    "web-capture": "./dist/cli.js"
   },
   "scripts": {
     "start": "node ./dist/cli.js",

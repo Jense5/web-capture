@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // @flow
 
 import fs from 'fs';
